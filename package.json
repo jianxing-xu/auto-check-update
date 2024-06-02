@@ -1,5 +1,5 @@
 {
-  "name": "auto-check-update",
+  "name": "@jx/auto-check-update",
   "type": "module",
   "version": "0.0.4",
   "packageManager": "pnpm@9.1.1",
@@ -7,12 +7,12 @@
   "author": "Jianxing Xu <xjx_me@yeah.net>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/jianxing-xu",
-  "homepage": "https://github.com/jianxing-xu/auto-check-update#readme",
+  "homepage": "https://github.com/jianxing-xu/@jx/auto-check-update#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jianxing-xu/auto-check-update.git"
+    "url": "git+https://github.com/jianxing-xu/@jx/auto-check-update.git"
   },
-  "bugs": "https://github.com/jianxing-xu/auto-check-update/issues",
+  "bugs": "https://github.com/jianxing-xu/@jx/auto-check-update/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {

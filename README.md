@@ -1,4 +1,4 @@
-# auto-check-update
+# @jx/auto-check-update
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -8,13 +8,25 @@
 
 Automatically checks for updates to your site and notifies you
 
-# Useage
+# Install
 
-## CND
-1231231
+```bash
+npm i @jx/auto-check-update
+```
 
-## NPM
-123123
+# Usage
+
+```js
+import { start } from '@jx/auto-check-update'
+
+// main.js
+start({
+  onNotify() {
+    // exec your code
+  },
+  time: 2000 // interval
+})
+```
 
 # License
 
@@ -22,13 +34,13 @@ Automatically checks for updates to your site and notifies you
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/auto-check-update?style=flat&colorA=080f12&colorB=1fa669
-[npm-version-href]: https://npmjs.com/package/auto-check-update
-[npm-downloads-src]: https://img.shields.io/npm/dm/auto-check-update?style=flat&colorA=080f12&colorB=1fa669
-[npm-downloads-href]: https://npmjs.com/package/auto-check-update
-[bundle-src]: https://img.shields.io/bundlephobia/minzip/auto-check-update?style=flat&colorA=080f12&colorB=1fa669&label=minzip
-[bundle-href]: https://bundlephobia.com/result?p=auto-check-update
-[license-src]: https://img.shields.io/github/license/antfu/auto-check-update.svg?style=flat&colorA=080f12&colorB=1fa669
-[license-href]: https://github.com/antfu/auto-check-update/blob/main/LICENSE
+[npm-version-src]: https://img.shields.io/npm/v/@jx/auto-check-update?style=flat&colorA=080f12&colorB=1fa669
+[npm-version-href]: https://npmjs.com/package/@jx/auto-check-update
+[npm-downloads-src]: https://img.shields.io/npm/dm/@jx/auto-check-update?style=flat&colorA=080f12&colorB=1fa669
+[npm-downloads-href]: https://npmjs.com/package/@jx/auto-check-update
+[bundle-src]: https://img.shields.io/bundlephobia/minzip/@jx/auto-check-update?style=flat&colorA=080f12&colorB=1fa669&label=minzip
+[bundle-href]: https://bundlephobia.com/result?p=@jx/auto-check-update
+[license-src]: https://img.shields.io/github/license/antfu/@jx/auto-check-update.svg?style=flat&colorA=080f12&colorB=1fa669
+[license-href]: https://github.com/antfu/@jx/auto-check-update/blob/main/LICENSE
 [jsdocs-src]: https://img.shields.io/badge/jsdocs-reference-080f12?style=flat&colorA=080f12&colorB=1fa669
-[jsdocs-href]: https://www.jsdocs.io/package/auto-check-update
+[jsdocs-href]: https://www.jsdocs.io/package/@jx/auto-check-update
