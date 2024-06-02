@@ -13,7 +13,7 @@
     "url": "git+https://github.com/jianxing-xu/auto-check-update.git"
   },
   "bugs": "https://github.com/jianxing-xu/auto-check-update/issues",
-  "keywords": [],
+  "keywords": ["auto update", "check update", "update", "website"],
   "sideEffects": false,
   "exports": {
     ".": {
