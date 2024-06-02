@@ -34,19 +34,29 @@ async function check() {
   return false
 }
 
-export function start(options: { onNotify: () => void, time: number }) {
+export function start(options: { onNotify: () => boolean | undefined, time: number }) {
   if (!options)
     throw new TypeError('options is required')
 
   const { onNotify, time = 2000 } = options
+  if (!onNotify || typeof onNotify !== 'function')
+    throw new TypeError('onNotify is required and its type must be Function')
+
   // @ts-expect-error ssr return
   if (typeof window === 'undefined')
     return
 
-  clearInterval(timer)
-  timer = setInterval(async () => {
-    const needUpdate = await check()
-    if (needUpdate)
-      onNotify?.()
-  }, time)
+  function run() {
+    clearInterval(timer)
+    timer = setTimeout(async () => {
+      const needUpdate = await check()
+      if (!needUpdate)
+        return
+      const r = onNotify()
+      if (r)
+        return
+      run()
+    }, time)
+  }
+  run()
 }
