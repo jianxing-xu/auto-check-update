@@ -3,9 +3,8 @@ export const UpdateNotifySymbol = Symbol('AUTO_CHECK_UPDATE_NOTIFY')
 let lastSrcs: string[] | null = null
 let timer: any = null
 
-async function getSrcs() {
+export function getSrcs(text: string) {
   const reg = /<script.*src=["'](?<src>[^"]+)/g
-  const text = await fetch(`/?time=${Date.now()}`).then(r => r.text())
 
   reg.lastIndex = 0
 
@@ -19,7 +18,8 @@ async function getSrcs() {
 }
 
 async function check() {
-  const newSrcs = await getSrcs()
+  const text = await fetch(`/?time=${Date.now()}`).then(r => r.text())
+  const newSrcs = await getSrcs(text)
   if (!lastSrcs) {
     lastSrcs = newSrcs
     return false
@@ -42,7 +42,7 @@ export function start(options: { onNotify: () => boolean | void, time: number })
   if (!onNotify || typeof onNotify !== 'function')
     throw new TypeError('onNotify is required and its type must be Function')
 
-  // @ts-expect-error ssr return
+  // @ts-expect
   if (typeof window === 'undefined')
     return
 
