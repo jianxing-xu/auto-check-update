@@ -1,7 +1,7 @@
 {
   "name": "@jx/auto-check-update",
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "packageManager": "pnpm@9.1.1",
   "description": "Automatically checks for updates to your site and notifies you",
   "author": "Jianxing Xu <xjx_me@yeah.net>",
