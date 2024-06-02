@@ -34,7 +34,7 @@ async function check() {
   return false
 }
 
-export function start(options: { onNotify: () => boolean | undefined, time: number }) {
+export function start(options: { onNotify: () => boolean | void, time: number }) {
   if (!options)
     throw new TypeError('options is required')
 
@@ -51,7 +51,7 @@ export function start(options: { onNotify: () => boolean | undefined, time: numb
     timer = setTimeout(async () => {
       const needUpdate = await check()
       if (!needUpdate)
-        return
+        return run()
       const r = onNotify()
       if (r)
         return
