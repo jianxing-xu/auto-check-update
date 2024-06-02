@@ -1,7 +1,7 @@
 {
   "name": "auto-check-update",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "packageManager": "pnpm@9.1.1",
   "description": "Automatically checks for updates to your site and notifies you",
   "author": "Jianxing Xu <xjx_me@yeah.net>",
@@ -41,7 +41,7 @@
     "dev": "unbuild --stub",
     "lint": "eslint .",
     "prepublishOnly": "nr build",
-    "release": "bumpp && npm publish",
+    "release": "bumpp && npm publish --access public",
     "start": "esno src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
